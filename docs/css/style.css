@@ -1,43 +1,113 @@
-html, body {
-	background: #182538;
-    height: 100%;
-    font-family: serif;
-    text-align: left;
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e2a38;
+    color: #ffffff;
+    line-height: 1.6;
+    position: relative;
+    overflow-y: scroll;
 }
-.main {
-    height: 100%;
+
+/* Background grid for a cyber-security look */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: table;
-}
-.wrapper {
-    display: table-cell;
     height: 100%;
-    vertical-align: middle;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
 }
-.logoTitle {
-	color: #1AA31E;
-	font-family: monospace;
-	font-size: 6.5vw;
-	font-weight: bold;
+
+header {
+    background-color: #0e3e26;
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }
-.logoSubtitle{
-	color: #dddddd;
-	font-size: 4.65vw;
+
+header h1 {
+    color: #61c083;
+    font-size: 5em;
+    font-family: monospace;
+    margin: 0;
 }
-.logoBox{
-	margin: 5%;
-	padding-left: 5%;
-	width: 40%;
-	border-left: 2px solid #1AA31E;
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #cfd2d6;
 }
-.punchline{
-	color: #dddddd;
-	font-style: italic;
-	margin-top: 3vw;
-	font-size: 2.3vw;
+
+.section {
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    min-height: 60vh;
 }
-.bottomline{
-	color: #dddddd;
-	margin-top: 7%;
-	font-size:  2vw;
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    background: rgba(97, 192, 131, 0.15);
+    border: 1px solid #61c083;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(97, 192, 131, 0.3);
+}
+
+.benefit-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #61c083;
+}
+
+.cta-button {
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.cta-button:hover {
+    background-color: #e6772e;
+    box-shadow: 0 0 15px #ff8c42;
+}
+
+footer {
+    background-color: #0e3e26;
+    color: #cfd2d6;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    min-height: 20vh;
+}
+
+/* Adding decorative elements */
+.cyber-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #61c083;
+    border-radius: 10px;
+    opacity: 0.2;
 }
